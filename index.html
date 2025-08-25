@@ -1,1 +1,191 @@
-    Resources available soon!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MoralCLIP — Multimodal Moral Alignment</title>
+  <meta name="description" content="MoralCLIP: Contrastive alignment of vision-and-language representations with Moral Foundations Theory (MFT)." />
+  <meta property="og:title" content="MoralCLIP — Multimodal Moral Alignment" />
+  <meta property="og:description" content="Contrastive alignment of vision-and-language representations with Moral Foundations Theory (MFT)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/teaser.jpg" />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f172a;
+      --text:#e5e7eb;
+      --muted:#b9c0d0;
+      --brand:#7dd3fc;
+      --brand-strong:#38bdf8;
+      --chip:#1f2937;
+      --code:#0b1220;
+      --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";}
+    a{color:var(--brand-strong);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    header{padding:28px 0}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.05;margin:0 0 8px}
+    .subtitle{font-size:clamp(16px,2vw,20px);color:var(--muted);margin:8px 0 20px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.2px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:#0c1428;color:var(--text);text-decoration:none;font-weight:600}
+    .btn.primary{background:linear-gradient(135deg, var(--brand), var(--brand-strong));color:#061423;border:none}
+    .btn:focus{outline:2px solid var(--brand-strong);outline-offset:2px}
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .section{margin:28px 0}
+    h2{font-size:clamp(20px,3vw,28px);margin:0 0 12px}
+    p{line-height:1.65;color:var(--text)}
+    .muted{color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .kpi .box{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:12px}
+    .tag{font-size:11px;color:var(--muted)}
+    .big{font-size:22px;font-weight:700}
+    .small{font-size:12px}
+    footer{margin:36px 0 12px;color:var(--muted);font-size:13px}
+    img.hero-img{width:100%;border-radius:14px;border:1px solid var(--border);background:#0a0f1f}
+    .status{border-left:4px solid var(--brand-strong);padding:12px 14px;background:#0b1326;border-radius:8px}
+    .list{padding-left:18px}
+    .list li{margin:8px 0}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.kpi{grid-template-columns:1fr 1fr}.wrap{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <div>
+          <h1>MoralCLIP</h1>
+          <div class="subtitle">Contrastive alignment of vision-and-language representations with <em>Moral Foundations Theory</em> (MFT)</div>
+          <div class="chips">
+            <span class="chip">Multimodal</span>
+            <span class="chip">CLIP</span>
+            <span class="chip">Moral Foundations</span>
+            <span class="chip">Embedding Space</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#" onclick="alert('Paper link will be available upon publication')">Paper (Coming Soon)</a>
+            <a class="btn" href="#resources">Resources</a>
+            <a class="btn" href="#dataset">Dataset</a>
+            <a class="btn" href="#citation">Cite</a>
+          </div>
+        </div>
+        <div>
+          <img class="hero-img" src="assets/teaser.jpg" alt="MoralCLIP teaser: visualizing moral foundations across images and text" />
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="panel status">
+        <strong>Status:</strong> Code, dataset splits, and demo will be released upon paper acceptance. This research is currently under review for publication at a major conference venue.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="panel">
+          <h2>Abstract (short)</h2>
+          <p>
+            MoralCLIP extends multimodal learning with <strong>explicit moral grounding</strong> based on Moral Foundations Theory (MFT). By integrating visual and textual moral cues into a unified embedding space, the model aligns inputs by <em>shared moral meaning</em>—not only by semantic similarity—enabling morally-aware cross-modal retrieval and analysis.
+          </p>
+          <p class="muted small">See full abstract in the paper.</p>
+        </div>
+        <div class="panel">
+          <h2>Highlights</h2>
+          <ul class="list">
+            <li><strong>Morally-grounded embeddings:</strong> A CLIP-style contrastive objective augmented with moral supervision.</li>
+            <li><strong>New multimodal moral dataset:</strong> ~15k image–text pairs with MFT-aligned multi-labels (via expert labels + augmentation).</li>
+            <li><strong>Visual Moral Compass:</strong> A high-precision moral image classifier used to scale annotations and generate captions.</li>
+            <li><strong>Improved moral understanding:</strong> Gains across unimodal and multimodal analyses of moral content.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="panel" id="resources">
+          <h2>Resources</h2>
+          <ul class="list">
+            <li>📄 Paper: <span class="muted">Under review</span> — will be published soon with full technical details</li>
+            <li>🧠 Model &amp; Code: <span class="muted">Coming soon</span></li>
+            <li>🗂️ Dataset: <a href="#dataset">Dataset card &amp; splits</a> — <span class="muted">coming soon</span>.</li>
+            <li>🌐 Demo: <span class="muted">Coming soon</span></li>
+          </ul>
+          <div class="kpi">
+            <div class="box"><div class="tag">Pairs</div><div class="big">≈15,000</div></div>
+            <div class="box"><div class="tag">Foundations</div><div class="big">5 (MFT)</div></div>
+            <div class="box"><div class="tag">Modalities</div><div class="big">Image ↔ Text</div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Authors</h2>
+          <p><strong>Ana Carolina Condez</strong>, <strong>Diogo Tavares</strong>, <strong>João Magalhães</strong><br><span class="muted">NOVA School of Science and Technology (FCT NOVA), NOVA LINCS — Lisbon, Portugal</span></p>
+          <p class="small muted">Contact: <a href="mailto:a.condez@campus.fct.unl.pt">a.condez@campus.fct.unl.pt</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="usage">
+      <div class="panel">
+        <h2>Planned Usage (preview)</h2>
+        <p>Coming Soon</p>
+      </div>
+    </section>
+
+    <section class="section" id="dataset">
+      <div class="panel">
+        <h2>Dataset</h2>
+        <p>The <strong>MoralCLIP dataset</strong> provides multi-label annotations for the five Moral Foundations (care, fairness, loyalty, authority, purity) across image–text pairs. It is designed for training and evaluating morally-aware multimodal models.</p>
+        <ul class="list">
+          <li><strong>Download:</strong> <span class="muted">coming soon</span></li>
+          <li><strong>Contents:</strong> image, text, labels (multi-hot over MFT).</li>
+          <li><strong>Splits:</strong> train / validation / test with fixed seeds and metadata.</li>
+          <li><strong>License:</strong> research-use; check third-party data licenses.</li>
+        </ul>
+        <p>Coming Soon</p>
+      </div>
+    </section>
+
+    <section class="section" id="citation">
+      <div class="panel">
+        <h2>Citation</h2>
+        <p>Coming Soon</p>
+        <button class="btn" onclick="alert('Citation will be added once available')">Copy BibTeX</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="panel">
+          <h2>Ethical Considerations</h2>
+          <ul class="list">
+            <li>Morality is <em>pluralistic</em> and context-dependent; model outputs should be interpreted with care.</li>
+            <li>Training involved expert-labeled and augmented data; annotation biases and cultural variance may persist.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>License &amp; Acknowledgements</h2>
+          <p>Code and models will be released under a permissive research license. Portions of the dataset leverage <em>SMID</em> (Crone et&nbsp;al., 2018) annotations; please consult original licenses for any third-party data.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 MoralCLIP — This page is a project landing for research purposes. Last updated: <span id="last-updated"></span>
+    </footer>
+  </div>
+
+<script>
+  document.getElementById('last-updated').textContent = new Date().toISOString().slice(0,10);
+</script>
+</body>
+</html>
