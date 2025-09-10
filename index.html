@@ -190,33 +190,28 @@
       border: 1px solid var(--border);
     }
 
-    .custom-legend-overlay {
-        position: absolute;
-        bottom: -4px;
-        right: 12px;
-        background: rgba(0,0,0,0.6);
-        border-radius: 8px;
-        padding: 6px 12px;
-        display: flex;
-        gap: 16px;
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--text);
-        z-index: 11; /* above indicators */
-      }
-      
-      .legend-color {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 3px;
-        margin-right: 5px;
-        vertical-align: middle;
-      }
-      
-      .legend-color.clip-base { background: #ff6f91; }
-      .legend-color.moralclip { background: #38bdf8; }
-      .legend-color.safeclip { background: #a855f7; }
+    .custom-legend {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      color: var(--text);
+    }
+    
+    .legend-color {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    
+    .legend-color.clip-base { background: #ff6f91; }
+    .legend-color.moralclip { background: #38bdf8; }
+    .legend-color.safeclip { background: #a855f7; }
       
       @media (max-width: 600px) {
         .custom-legend-overlay {
@@ -282,11 +277,12 @@
               <div class="indicator" data-slide="2"></div>
               <div class="indicator" data-slide="3"></div>
             </div>
-            <div class="custom-legend-overlay">
+
+          </div>
+          <div class="custom-legend">
               <span><span class="legend-color clip-base"></span> CLIP-Base</span>
               <span><span class="legend-color moralclip"></span> MoralCLIP-Augmented</span>
               <span><span class="legend-color safeclip"></span> SafeCLIP-Large</span>
-            </div>
           </div>
           
         </div>
