@@ -394,20 +394,12 @@
 
 <script>
   const track = document.getElementById('carousel-track');
-  const title = document.getElementById('carousel-title');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
   const indicators = document.querySelectorAll('.indicator');
 
   let currentSlide = 0;
   const totalSlides = 4;
-
-  const titles = [
-    'MAP Performance across Moral Dimensions (Image)',
-    'MAP Performance across Moral Dimensions (Text)', 
-    'Image-to-Text MAP Performance across Moral Dimensions',
-    'Text-to-Image MAP Performance across Moral Dimensions'
-  ];
 
   function updateCarousel() {
     const translateX = -currentSlide * 25; 
