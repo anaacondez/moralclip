@@ -160,22 +160,6 @@
       background: var(--brand-strong);
     }
     
-    .carousel-title {
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0,0,0,0.9);
-      color: var(--text);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      z-index: 10;
-      text-align: center;
-      max-width: 90%;
-    }
-    
     .carousel-legend {
       margin-top: 15px;
       text-align: center;
@@ -250,10 +234,6 @@
           </div>
         </div>
         <div>
-          <div class="teaser-carousel">
-            <div class="carousel-title" id="carousel-title">
-              MAP Performance across Moral Dimensions (Image)
-            </div>
             
             <div class="carousel-container">
               <div class="carousel-track" id="carousel-track">
@@ -400,7 +380,6 @@
 
 <script>
   const track = document.getElementById('carousel-track');
-  const title = document.getElementById('carousel-title');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
   const indicators = document.querySelectorAll('.indicator');
@@ -418,7 +397,6 @@
   function updateCarousel() {
     const translateX = -currentSlide * 25; 
     track.style.transform = `translateX(${translateX}%)`;
-    title.textContent = titles[currentSlide];
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle('active', index === currentSlide);
       indicator.setAttribute('aria-current', index === currentSlide ? 'true' : 'false');
