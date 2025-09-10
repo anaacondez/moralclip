@@ -90,7 +90,7 @@
     }
     
     .carousel-slide {
-      width: 25%; /* Each slide takes 1/4 of track */
+      width: 25%; 
       height: 100%;
       display: flex;
       align-items: center;
@@ -189,6 +189,44 @@
       padding: 8px;
       border: 1px solid var(--border);
     }
+
+    .custom-legend-overlay {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        background: rgba(0,0,0,0.6);
+        border-radius: 8px;
+        padding: 6px 12px;
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text);
+        z-index: 11; /* above indicators */
+      }
+      
+      .legend-color {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 3px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+      
+      .legend-color.clip-base { background: #ff6f91; }
+      .legend-color.moralclip { background: #38bdf8; }
+      .legend-color.safeclip { background: #a855f7; }
+      
+      @media (max-width: 600px) {
+        .custom-legend-overlay {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+          font-size: 11px;
+        }
+      }
+
   </style>
 </head>
 <body>
@@ -224,28 +262,23 @@
                   <img src="assets/images/complete_radar_chart_image.png" alt="Image Performance Radar Chart">
                 </div>
                 
-                <!-- Slide 2: Text Performance -->
                 <div class="carousel-slide">
                   <img src="assets/images/complete_radar_chart_text.png" alt="Text Performance Radar Chart">
                 </div>
                 
-                <!-- Slide 3: Image-to-Text -->
                 <div class="carousel-slide">
                   <img src="assets/images/complete_I2T_radar.png" alt="Image-to-Text Performance">
                 </div>
                 
-                <!-- Slide 4: Text-to-Image -->
                 <div class="carousel-slide">
                   <img src="assets/images/complete_T2I_radar.png" alt="Text-to-Image Performance">
                 </div>
               </div>
             </div>
             
-            <!-- Navigation arrows -->
             <button class="carousel-nav carousel-prev" id="prev-btn">‹</button>
             <button class="carousel-nav carousel-next" id="next-btn">›</button>
             
-            <!-- Indicators -->
             <div class="carousel-indicators">
               <div class="indicator active" data-slide="0"></div>
               <div class="indicator" data-slide="1"></div>
@@ -253,10 +286,13 @@
               <div class="indicator" data-slide="3"></div>
             </div>
           </div>
-          
-          <div class="carousel-legend">
-            <img src="assets/images/label.png" alt="Performance Legend: CLIP-Base, MoralCLIP-Augmented, SafeCLIP-Large" />
+          <div class="custom-legend-overlay">
+            <span><span class="legend-color clip-base"></span> CLIP-Base</span>
+            <span><span class="legend-color moralclip"></span> MoralCLIP-Augmented</span>
+            <span><span class="legend-color safeclip"></span> SafeCLIP-Large</span>
           </div>
+          
+
         </div>
 
       </div>
