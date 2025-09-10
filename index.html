@@ -404,7 +404,6 @@
   function updateCarousel() {
     const translateX = -currentSlide * 25; 
     track.style.transform = `translateX(${translateX}%)`;
-    title.textContent = titles[currentSlide];
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle('active', index === currentSlide);
       indicator.setAttribute('aria-current', index === currentSlide ? 'true' : 'false');
