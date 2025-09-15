@@ -226,26 +226,56 @@
         margin: 10px 0 4px;
         display: flex;
         flex-direction: column;
-        text-align: left;
-        gap: 8px;
         align-items: center;
+        gap: 10px;
+        text-align: center;
       }
-    
+
     .mft-badge img {
-      width: 100%;  /* min 160px, grows with viewport, max 320px */
-      height: auto;
-      border-radius: 10px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
-    }
-      .mft-badge figcaption {
-        line-height: 1.3;
+        width: 100%;
+        max-width: 560px;  /* adjust to taste */
+        height: auto;
+        border: none;
+        background: none;
+        box-shadow: none;
+        border-radius: 10px; /* optional */
       }
-    @media (max-width: 900px) {
-      .mft-badge { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-      .mft-badge img { width: clamp(180px, 55vw, 260px); }
-    }
+
+      
+      .mft-badge figcaption {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 13px;
+        color: var(--muted);
+        max-width: 560px;
+        width: 100%;
+      }
+      
+      .caption-row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* evenly spaced */
+        gap: 8px;
+      }
+      
+      .caption-row span {
+        font-size: 13px;
+        font-weight: 500;
+      }
+      
+      .caption-row.vices span {
+        font-size: 12px;
+        color: var(--muted);
+        font-style: italic;
+      }
+      
+      @media (max-width: 600px) {
+        .caption-row {
+          grid-template-columns: 1fr 1fr; /* stack into 2 cols on small screens */
+          gap: 4px 10px;
+        }
+      }
+
     
   </style>
 </head>
@@ -268,11 +298,27 @@
             <a class="btn" href="#dataset">Dataset</a>
             <a class="btn" href="#citation">Cite</a>
           </div>
-          <figure class="mft-badge">
-            <img src="assets/images/mft_header.png"
-                 alt="The five Moral Foundations: Care, Fairness, Loyalty, Authority, Purity">
-            <figcaption class="small muted">Moral Foundations (MFT) reference</figcaption>
-          </figure>
+        <figure class="mft-badge">
+        <img src="assets/images/mft_header.png"
+             alt="Diagram of the five Moral Foundations: Care, Fairness, Loyalty, Authority, Purity">
+        <figcaption>
+          <div class="caption-row">
+            <span>Care</span>
+            <span>Fairness</span>
+            <span>Loyalty</span>
+            <span>Authority</span>
+            <span>Purity</span>
+          </div>
+          <div class="caption-row vices">
+            <span>Harm</span>
+            <span>Cheating</span>
+            <span>Betrayal</span>
+            <span>Subversion</span>
+            <span>Degradation</span>
+          </div>
+        </figcaption>
+      </figure>
+
         </div>
         <div>
           <div class="teaser-carousel">
