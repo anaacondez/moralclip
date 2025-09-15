@@ -222,25 +222,26 @@
         }
       }
     
-    .mft-badge {
-        margin: 10px 0 4px;
+      .mft-badge {
+        margin: 10px 0 18px;         
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
         text-align: center;
-      }
-
-    .mft-badge img {
         width: 100%;
-        max-width: 560px;  /* adjust to taste */
+        max-width: 560px;            
+        margin-left: 0;              
+      }
+      
+      .mft-badge img {
+        width: 100%;
         height: auto;
         border: none;
         background: none;
         box-shadow: none;
-        border-radius: 10px; /* optional */
+        border-radius: 10px;
       }
-
       
       .mft-badge figcaption {
         display: flex;
@@ -248,31 +249,20 @@
         gap: 6px;
         font-size: 13px;
         color: var(--muted);
-        max-width: 560px;
-        width: 100%;
+        width: 100%;                
       }
+
       
-      .caption-row {
+     .caption-row {
         display: grid;
-        grid-template-columns: repeat(5, 1fr); /* evenly spaced */
+        grid-template-columns: repeat(5, 1fr);
         gap: 8px;
       }
       
-      .caption-row span {
-        font-size: 13px;
-        font-weight: 500;
-      }
-      
-      .caption-row.vices span {
-        font-size: 12px;
-        color: var(--muted);
-        font-style: italic;
-      }
-      
-      @media (max-width: 600px) {
+      @media (max-width: 700px) {
         .caption-row {
-          grid-template-columns: 1fr 1fr; /* stack into 2 cols on small screens */
-          gap: 4px 10px;
+          grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+          gap: 6px;
         }
       }
 
@@ -299,25 +289,28 @@
             <a class="btn" href="#citation">Cite</a>
           </div>
         <figure class="mft-badge">
-        <img src="assets/images/mft_header.png"
-             alt="Diagram of the five Moral Foundations: Care, Fairness, Loyalty, Authority, Purity">
-        <figcaption>
-          <div class="caption-row">
+          <img src="assets/images/mft_header_row1.png"
+               alt="Moral Foundations: Care, Fairness, Loyalty, Authority, Purity">
+          <figcaption class="caption-row">
             <span>Care</span>
             <span>Fairness</span>
             <span>Loyalty</span>
             <span>Authority</span>
             <span>Purity</span>
-          </div>
-          <div class="caption-row vices">
+          </figcaption>
+        </figure>
+        
+        <figure class="mft-badge">
+          <img src="assets/images/mft_header_row2.png"
+               alt="Moral Foundation vices: Harm, Cheating, Betrayal, Subversion, Degradation">
+          <figcaption class="caption-row vices">
             <span>Harm</span>
             <span>Cheating</span>
             <span>Betrayal</span>
             <span>Subversion</span>
             <span>Degradation</span>
-          </div>
-        </figcaption>
-      </figure>
+          </figcaption>
+        </figure>
 
         </div>
         <div>
