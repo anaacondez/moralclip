@@ -74,21 +74,21 @@
       width: 100%;
       height: 400px;
     }
-    
+
     .carousel-container {
       position: relative;
       width: 100%;
       height: 100%;
       overflow: hidden;
     }
-    
+
     .carousel-track {
       display: flex;
       width: 400%; /* 4 slides */
       height: 100%;
       transition: transform 0.3s ease;
     }
-    
+
     .carousel-slide {
       width: 25%; 
       height: 100%;
@@ -97,14 +97,14 @@
       justify-content: center;
       position: relative;
     }
-    
+
     .carousel-slide img {
       max-width: 90%;
       max-height: 90%;
       object-fit: contain;
       border-radius: 8px;
     }
-    
+
     .carousel-nav {
       position: absolute;
       top: 50%;
@@ -124,20 +124,20 @@
       transition: all 0.2s ease;
       z-index: 10;
     }
-    
+
     .carousel-nav:hover {
       background: var(--brand-strong);
       color: #061423;
     }
-    
+
     .carousel-prev {
       left: 10px;
     }
-    
+
     .carousel-next {
       right: 10px;
     }
-    
+
     .carousel-indicators {
       position: absolute;
       bottom: 15px;
@@ -146,7 +146,7 @@
       display: flex;
       gap: 8px;
     }
-    
+
     .indicator {
       width: 10px;
       height: 10px;
@@ -155,11 +155,11 @@
       cursor: pointer;
       transition: background 0.2s ease;
     }
-    
+
     .indicator.active {
       background: var(--brand-strong);
     }
-    
+
     .carousel-title {
       position: absolute;
       top: 15px;
@@ -175,12 +175,12 @@
       text-align: center;
       max-width: 90%;
     }
-    
+
     .carousel-legend {
       margin-top: 15px;
       text-align: center;
     }
-    
+
     .carousel-legend img {
       max-width: 100%;
       height: auto;
@@ -199,7 +199,7 @@
       gap: 24px;
       color: var(--text);
     }
-    
+
     .legend-color {
       display: inline-block;
       width: 12px;
@@ -208,11 +208,11 @@
       margin-right: 5px;
       vertical-align: middle;
     }
-    
+
     .legend-color.clip-base { background: #ff6f91; }
     .legend-color.moralclip { background: #38bdf8; }
     .legend-color.safeclip { background: #a855f7; }
-      
+
       @media (max-width: 600px) {
         .custom-legend {
           flex-direction: column;
@@ -231,8 +231,13 @@
         grid-template-columns: 1fr auto 1fr;
         gap: 24px;
         align-items: center;
+
+
+
+
+
       }
-      
+
       .mft-half {
         position: relative;
       }
@@ -256,7 +261,7 @@
       .mft-image-container:hover img {
         opacity: 0.5;
       }
-      
+
       .mft-overlay {
         position: absolute;
         top: 0;
@@ -271,7 +276,8 @@
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(1px);
       }
-      
+
+
       .mft-category-title {
         font-size: 24px;
         font-weight: 700;
@@ -282,18 +288,26 @@
       .virtues-half .mft-category-title {
         color: var(--brand);
       }
-      
+
       .vices-half .mft-category-title {
         color: #ff6f91;
+
+
+
       }
       
       .mft-labels {
         display: flex;
+
         flex-direction: column;
         gap: 8px;
+
         align-items: center;
+
+
+
       }
-      
+
       .mft-label {
         background: rgba(0, 0, 0, 0.8);
         color: var(--text);
@@ -308,7 +322,7 @@
         min-width: 100px;
         text-align: center;
       }
-      
+
       .virtues-half .mft-label:hover {
         background: var(--brand);
         color: #061423;
@@ -346,7 +360,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
       }
-      
+
       @media (max-width: 900px) {
         .mft-container {
           grid-template-columns: 1fr;
@@ -400,7 +414,7 @@
         }
       }
 
-    
+
   </style>
 </head>
 <body>
@@ -422,36 +436,36 @@
             <a class="btn" href="#dataset">Dataset</a>
             <a class="btn" href="#citation">Cite</a>
           </div>
-      
+
 
         </div>
         <div>
           <div class="teaser-carousel">
-            
+
             <div class="carousel-container">
               <div class="carousel-track" id="carousel-track">
 
                 <div class="carousel-slide">
                   <img src="assets/images/complete_radar_chart_image.png" alt="Image Performance Radar Chart">
                 </div>
-                
+
                 <div class="carousel-slide">
                   <img src="assets/images/complete_radar_chart_text.png" alt="Text Performance Radar Chart">
                 </div>
-                
+
                 <div class="carousel-slide">
                   <img src="assets/images/complete_I2T_radar.png" alt="Image-to-Text Performance">
                 </div>
-                
+
                 <div class="carousel-slide">
                   <img src="assets/images/complete_T2I_radar.png" alt="Text-to-Image Performance">
                 </div>
               </div>
             </div>
-            
+
             <button class="carousel-nav carousel-prev" id="prev-btn">‹</button>
             <button class="carousel-nav carousel-next" id="next-btn">›</button>
-            
+
             <div class="carousel-indicators">
               <div class="indicator active" data-slide="0"></div>
               <div class="indicator" data-slide="1"></div>
@@ -470,45 +484,53 @@
       </div>
     </header>
 
-   <section class="section">
+    <section class="section mft-section">
       <div class="panel">
-        <h2 style="text-align: center; margin-bottom: 16px;">Moral Foundations Theory</h2>
-        <p style="text-align: center; color: var(--muted); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 16px;">
-          Our model aligns multimodal representations across five fundamental moral dimensions, each with opposing virtue-vice pairs.
+        <h2 style="text-align: center; margin-bottom: 24px;">Moral Foundations Theory</h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Our model aligns multimodal representations across five fundamental moral dimensions, each with opposing virtue–vice pairs.
         </p>
         
-        <div class="mft-foundations-grid">
-          <!-- Virtues Side -->
-          <div class="mft-side virtues-side">
-            <h3 class="mft-side-title virtues-title">Virtues</h3>
-            <div class="mft-image-wrapper">
-              <img src="assets/images/virtues_header.png" alt="Moral Foundation Virtues" class="mft-image">
-              <div class="mft-labels-overlay">
-                <div class="mft-foundation-label">Care</div>
-                <div class="mft-foundation-label">Fairness</div>
-                <div class="mft-foundation-label">Loyalty</div>
-                <div class="mft-foundation-label">Authority</div>
-                <div class="mft-foundation-label">Sanctity</div>
+        <div class="mft-container">
+          <!-- Virtues side -->
+          <div class="mft-half virtues-half">
+            <div class="mft-image-container">
+              <img src="assets/images/virtues_header.png" alt="Moral Foundation Virtues">
+              <div class="mft-overlay">
+                <h3 class="mft-category-title">Virtues</h3>
+                <div class="mft-labels">
+                  <span class="mft-label">Care</span>
+                  <span class="mft-label">Fairness</span>
+                  <span class="mft-label">Loyalty</span>
+                  <span class="mft-label">Authority</span>
+                  <span class="mft-label">Sanctity</span>
+                </div>
               </div>
+
+
             </div>
           </div>
           
-          <!-- VS Divider -->
-          <div class="mft-vs-divider">
-            <span class="vs-text">vs</span>
+          <!-- Divider -->
+          <div class="mft-divider">
+            <div class="mft-divider-line"></div>
+            <span class="mft-vs">vs</span>
+            <div class="mft-divider-line"></div>
           </div>
           
-          <!-- Vices Side -->
-          <div class="mft-side vices-side">
-            <h3 class="mft-side-title vices-title">Vices</h3>
-            <div class="mft-image-wrapper">
-              <img src="assets/images/vices_header.png" alt="Moral Foundation Vices" class="mft-image">
-              <div class="mft-labels-overlay">
-                <div class="mft-foundation-label">Harm</div>
-                <div class="mft-foundation-label">Cheating</div>
-                <div class="mft-foundation-label">Betrayal</div>
-                <div class="mft-foundation-label">Subversion</div>
-                <div class="mft-foundation-label">Degradation</div>
+          <!-- Vices side -->
+          <div class="mft-half vices-half">
+            <div class="mft-image-container">
+              <img src="assets/images/vices_header.png" alt="Moral Foundation Vices">
+              <div class="mft-overlay">
+                <h3 class="mft-category-title">Vices</h3>
+                <div class="mft-labels">
+                  <span class="mft-label">Harm</span>
+                  <span class="mft-label">Cheating</span>
+                  <span class="mft-label">Betrayal</span>
+                  <span class="mft-label">Subversion</span>
+                  <span class="mft-label">Degradation</span>
+                </div>
               </div>
             </div>
           </div>
