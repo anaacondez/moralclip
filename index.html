@@ -644,6 +644,31 @@
   updateCarousel();
 
   document.getElementById('last-updated').textContent = new Date().toISOString().slice(0,10);
+
+  function copyBibtex() {
+    const bibtex = `@inproceedings{10.1145/3746027.3758166,
+  author = {Condez, Ana Carolina and Tavares, Diogo and Magalh\\~{a}es, Jo\\~{a}o},
+  title = {MoralCLIP: Contrastive Alignment of Vision-and-Language Representations with Moral Foundations Theory},
+  year = {2025},
+  isbn = {9798400720352},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3746027.3758166},
+  doi = {10.1145/3746027.3758166},
+  booktitle = {Proceedings of the 33rd ACM International Conference on Multimedia},
+  pages = {12399–12408},
+  numpages = {10},
+  keywords = {ai, clip, ethics, mft, moral, moral foundations, moralclip},
+  location = {Dublin, Ireland},
+  series = {MM '25}
+}`;
+    
+    navigator.clipboard.writeText(bibtex).then(() => {
+      alert('BibTeX copied to clipboard!');
+    }).catch(() => {
+      alert('Failed to copy. Please copy manually.');
+    });
+  }
 </script>
 
 </body>
