@@ -301,29 +301,40 @@
         letter-spacing: 1px;
       }
       
-      @media (max-width: 900px) {
-        .mft-row {
+     @media (max-width: 900px) {
+        .mft-grid-wrapper {
+          display: grid;
           grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
         }
+        
+        .mft-row {
+          display: contents; 
+        }
+        
+        .mft-divider-text {
+          display: none;
+        }
+        
+        .virtues-row .mft-card:nth-child(1) { order: 1; }
+        .vices-row .mft-card:nth-child(1) { order: 2; }
+        .virtues-row .mft-card:nth-child(2) { order: 3; }
+        .vices-row .mft-card:nth-child(2) { order: 4; }
+        .virtues-row .mft-card:nth-child(3) { order: 5; }
+        .vices-row .mft-card:nth-child(3) { order: 6; }
+        .virtues-row .mft-card:nth-child(4) { order: 7; }
+        .vices-row .mft-card:nth-child(4) { order: 8; }
+        .virtues-row .mft-card:nth-child(5) { order: 9; }
+        .vices-row .mft-card:nth-child(5) { order: 10; }
       }
       
       @media (max-width: 600px) {
-        .mft-row {
-          grid-template-columns: 1fr;
-        }
         .mft-card img {
-          height: 160px;
+          height: 120px;
         }
-      }
-
-    .virtue-text {
-        color: #38bdf8; /* same cyan as hover */
-        font-weight: 700;
-      }
-      
-      .vice-text {
-        color: #f87171; /* same coral-red as hover */
-        font-weight: 700;
+        .mft-hover span {
+          font-size: 14px;
+        }
       }
 
 
